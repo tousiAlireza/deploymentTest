@@ -1,0 +1,20 @@
+
+<ul class="nav nav-pills">
+    <li class="nav-item"><a class="nav-link" [ngClass]="{'active': viewMode === 'map'}" (click)="viewMode = 'map'">Map View</a></li>
+    <li class="nav-item"><a class="nav-link" [ngClass]="{'active': viewMode === 'list'}" (click)="viewMode = 'list'">List View</a></li>
+</ul>
+<div [ngSwitch]="viewMode">
+    <todos *ngSwitchCase="'map'" style="padding: 4rem;"></todos>
+    <div *ngSwitchCase="'list'" >
+        <div>
+            <label for="appColorful">appColorful: </label>
+            <input type="text" appColorful name="appColorful">
+        </div>
+        <div>
+            <label for="appHighlight">appHighlight: </label>
+            <input type="text" appHighlight name="appHighlight">
+        </div>
+    </div>
+    <div *ngSwitchDefault>OtherWise</div>
+
+</div>

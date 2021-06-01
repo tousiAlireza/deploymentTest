@@ -1,0 +1,9 @@
+<button class="btn btn-primary" style="display:block" (click)="onAdd()">Add</button>
+<ul>
+    <li *ngFor="let course of courses"> {{course.name}} <button class="btn btn-primary"(click)="onRemove(course)">Remove</button> </li>
+</ul>
+
+<!-- <button class="btn btn-primary"> Save </button> -->
+
+<!-- <input type="text" class="form-control" (keyup.enter)="enter()"> -->
+<!-- <input type="text" class="form-control" [(ngModel)]="email" (keyup.enter)="onKeyUp()"> -->
